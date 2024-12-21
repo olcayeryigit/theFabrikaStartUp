@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 w-full  px-4 py-0 z-50">
+    <nav className="absolute top-0 w-full  px-4 py-0 z-50 ">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
 <Logo/>        
 <Tabs/>
@@ -22,11 +22,11 @@ const Navbar = () => {
       
         <div className='flex items-center text-[#F0EDF9] group cursor-pointer w-48 transition-all duration-800'>
           
-  <div className='w-3.5 h-8 bg-[#F0EDF9]'></div>
-  <div className='relative arrow w-10 h-10 group-hover:left-2 transition-all duration-800'>
+  <div className='w-3.5 h-6 '></div>
+  <div className='relative arrow w-7 h-7 group-hover:left-2 transition-all duration-800'>
 
 
-    <Image className='object-contain' fill src="/images/patterns/arrow-2.svg" />
+    <Image className='object-contain' alt='' fill src="/images/patterns/arrow-2.svg" />
   </div>
   <div className=' font-semibold text-xl items-center ms-2 group-hover:ps-2 transition-all duration-800'>Contact
 

@@ -12,18 +12,18 @@ function App() {
     <div className="container">
       <div className="menu">
         <div
-          className="active-indicator "
+          className="active-indicator"
           style={{ transform: `translateX(${activeTab * 100}%)` }}
         />
-        <div className="tab font-semibold" onClick={() => handleClick(0)}>
-          Tab 1
-        </div>
-        <div className="tab font-semibold" onClick={() => handleClick(1)}>
-          Tab 2
-        </div>
-        <div className="tab font-semibold" onClick={() => handleClick(2)}>
-          Tab 3
-        </div>
+        {['About', 'Resources', 'Products', 'Contact'].map((tab, index) => (
+          <div
+            key={index}
+            className={`tab font-semibold ${activeTab === index ? 'active-tab' : ''}`}
+            onClick={() => handleClick(index)}
+          >
+            {tab}
+          </div>
+        ))}
       </div>
     </div>
   );

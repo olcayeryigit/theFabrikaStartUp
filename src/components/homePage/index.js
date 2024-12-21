@@ -3,10 +3,12 @@ import Main from './main/Main'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className=''>
         <Main/>
     </div>
   )
 }
 
 export default HomePage
+
+//#F0EDF9

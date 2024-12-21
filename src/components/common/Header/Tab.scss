@@ -1,36 +1,42 @@
-
-
 .menu {
   display: flex;
   position: relative;
   margin: 0 auto;
-  background-color: rgb(240, 237, 249,0.5);
+  background-color: rgba(221, 230, 229, 0.2);
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 300px;
+  width: 500px;
   z-index: 1; /* Ensure menu content stays above active indicator */
 }
 
 .tab {
+  color: #F9FAF6; /* Pasif tab metin rengi */
   flex: 1;
   padding: 10px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   z-index: 2; /* Ensure text stays above the indicator */
 }
 
-
+.tab.active-tab {
+  color: #000; /* Aktif tab metin rengi siyah */
+  font-weight: bold;
+}
 
 .active-indicator {
+  color: rgb(221, 230, 229) !important;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   width: 33.33%;
-  background-color: #F0EDF9;
+  background-color: #f0edf9;
   border-radius: 30px;
   transition: transform 0.3s ease;
   z-index: 0; /* Ensure it stays behind the tabs */
+}
+
+.active-indicator {
+  width: calc(100% / 4); /* Tab sayısına göre genişliği otomatik ayarlar */
 }
